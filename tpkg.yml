@@ -1,0 +1,9 @@
+name: docker-wrapper
+version: 0.3.3
+#package_version: 1
+maintainer: ishaikh@yp.com
+description: A wrapper around docker that can be used to inject docker run flags
+#dependencies:
+#  - name: docker-engine
+#    minimum_version: 1.7
+#    native: true
