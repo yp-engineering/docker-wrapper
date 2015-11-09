@@ -24,7 +24,7 @@ func (m *ExampleRunModule) HandleRun(flags DockerFlags, runFlags DockerRunComman
 	ports := singleEnvValueLike(runFlags.Env, "PORTS")
 
 	// we are combining a few pieces of data into a new env var flag
-	newflags := []string{"-e", fmt.Sprintf("SAMPLE_RUN_MODULE=%s-%s", mesosTaskId, ports)}
+	newflags := []string{"-e", fmt.Sprintf("EXAMPLE_RUN_MODULE=%s-%s", mesosTaskId, ports)}
 
 	return newflags
 }
