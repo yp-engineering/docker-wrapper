@@ -6,7 +6,7 @@ TMPDIR?=/tmp
 INSTALL?=install
 
 BINARY=docker-wrapper
-PKG_SRC=main.go version.go util.go docker_flags.go run_cmd.go
+PKG_SRC=main.go version.go util.go docker_flags.go run_cmd.go example_run_module.go
 TEST_PKG_SRC=docker_wrapper_test.go
 
 PACKAGE_DIR=$(TMPDIR)/docker-wrapper.tpkg.tmp
