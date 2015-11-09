@@ -10,13 +10,13 @@ import (
 	"log"
 )
 
-type SampleRunModule struct {
+type ExampleRunModule struct {
 	DefaultRunModule
 }
 
 // HandleRun implements the WrapperRunModule interface
-func (m *SampleRunModule) HandleRun(flags DockerFlags, runFlags DockerRunCommandFlags) []string {
-	log.Println("INFO: SampleRunModule.HandleRun(...)")
+func (m *ExampleRunModule) HandleRun(flags DockerFlags, runFlags DockerRunCommandFlags) []string {
+	log.Println("INFO: ExampleRunModule.HandleRun(...)")
 
 	// look for a few 'standard' vars and craft our own
 	// (run_cmd.go already looks for MESOS_TASK_ID and pals)
@@ -31,5 +31,5 @@ func (m *SampleRunModule) HandleRun(flags DockerFlags, runFlags DockerRunCommand
 
 // init calls RegisterRunModule
 func init() {
-	RegisterRunModule(&SampleRunModule{})
+	RegisterRunModule(&ExampleRunModule{})
 }
