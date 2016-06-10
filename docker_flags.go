@@ -91,7 +91,7 @@ type DockerRunCommandFlags struct {
 	DeviceReadBps       []string       `long:"device-read-bps" description:"Limit read rate (bytes per second) from a device"`
 	DeviceReadIops      []string       `long:"device-read-iops" description:"Limit read rate (IO per second) from a device"`
 	DeviceWriteBps      []string       `long:"device-write-bps" description:"Limit write rate (bytes per second) to a device"`
-	DisableWriteIops    []string       `long:"device-write-iops" description:"Limit write rate (IO per second) to a device"`
+	DeviceWriteIops     []string       `long:"device-write-iops" description:"Limit write rate (IO per second) to a device"`
 	DisableContentTrust bool           `long:"disable-content-trust" description:"Skip image verification"`
 	Dns                 []string       `long:"dns" description:"Set custom DNS servers"`
 	DnsOpt              []string       `long:"dns-opt" description:"Set DNS options"`
@@ -129,6 +129,7 @@ type DockerRunCommandFlags struct {
 	Publish             []string       `short:"p" long:"publish" description:"Publish a container's port(s) to the host"`
 	PublishService      string         `long:"publish-service" description:"Publish this container as a service (deprecated)"`
 	Pid                 string         `long:"pid" description:"PID namespace to use"`
+	PidsLimit           string         `long:"pids-limit" description:"Tune container pids limit (set -1 for unlimited)"`
 	Privileged          bool           `long:"privileged" description:"Give extended privileges to this container"`
 	ReadOnly            bool           `long:"read-only" description:"Mount the container's root filesystem as read only"`
 	Restart             string         `long:"restart" description:"Restart policy to apply when a container exits" default:"no"`
@@ -141,6 +142,7 @@ type DockerRunCommandFlags struct {
 	Tmpfs               []string       `long:"tmpfs" description:"Mount a tmpfs directory"`
 	User                string         `short:"u" long:"user" description:"Username or UID (format: <name|uid>[:<group|gid>])"`
 	Ulimit              []string       `long:"ulimit" description:"Ulimit options"`
+	Userns              string         `long:"userns" description:"User namespace to use"`
 	Uts                 string         `long:"uts" description:"UTS namespace to use"`
 	Volume              []string       `short:"v" long:"volume" description:"Bind mount a volume"`
 	VolumeDriver        string         `long:"volume-driver" description:"Optional volume driver for the container"`
