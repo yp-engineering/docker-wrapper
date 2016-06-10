@@ -41,9 +41,8 @@ and be able to add arguments to the command line flags.  To support
 that, there is a simple interface which a WrapperRunModule should 
 implement.
 
-* CLI: docker {DockerFlags} run {DockerRunCommandFlags}
-
-
+    // CLI: docker {DockerFlags} run {DockerRunCommandFlags}
+    //
     // Module interface for docker wrapper Run modules
     //   - Priority()  - a way to set order of operation - sorted in ascending order for execution
     //   - HandleRun(...) - handle any run-command context, setting global vars as needed and return new docker run args to inject
