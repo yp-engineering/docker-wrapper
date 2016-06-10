@@ -154,7 +154,7 @@ func TestParseJsonFromString_label(t *testing.T) {
 	assert.Equal(t, "/var/log/sample-access.log", accesslog_hash["File"], "Expected correct File")
 
 	errorlog_hash := test_list[1].(map[string]interface{})
-	assert.Equal(t, "example_error_log", errorlog_hash["Topic"], "Expected correct Topic")
+	assert.Equal(t, "sample_error_log", errorlog_hash["Topic"], "Expected correct Topic")
 	assert.Equal(t, "/var/log/sample-error.log", errorlog_hash["File"], "Expected correct File")
 }
 
